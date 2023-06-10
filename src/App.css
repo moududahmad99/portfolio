@@ -1,0 +1,44 @@
+/* Common CSS Start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 0.8;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #353535;
+  --tertiary-color: #f9f9f9;
+  --primary-font: "Jura", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+  --regular-font-weight: 400;
+  --medium-font-weight: 500;
+  --semibold-font-weight: 600;
+  --bold-font-weight: 700;
+}
+
+/* Common CSS End */

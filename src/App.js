@@ -1,10 +1,14 @@
+import React from 'react';
 import './App.css';
+import Home from './Pages/Home';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 function App() {
   return (
-    <>
-      <h1>Portfolio</h1>
-    </>
+    <React.Fragment>
+      <Home />
+    </React.Fragment>
   );
 }
 
