@@ -1,0 +1,145 @@
+/* Contact Area Start */
+#contact {
+  margin: 80px 0 100px 0;
+}
+
+.contact-title h3 {
+  font-size: 35px;
+  font-family: "Jura";
+  line-height: 53px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 50px;
+}
+
+.contact-title h3 span {
+  font-weight: 700;
+}
+
+#contact .row > * {
+  padding-right: calc(var(--bs-gutter-x) * 0);
+  padding-left: calc(var(--bs-gutter-x) * 0);
+}
+
+.contact-inner-left {
+  background: #6b6b6b;
+  margin: 80px 0 0 0;
+  padding: 40px 0;
+  height: 800px;
+}
+
+.contact-inner-left h3 {
+  font-family: var(--primary-font);
+  color: var(--tertiary-color);
+  padding: 69px 0 40px 69px;
+}
+
+.contact-inner {
+  background: #d9d9d9;
+  margin: 0 70px;
+  padding: 20px;
+}
+
+.contact-inner i {
+  background: #ffffff;
+  padding: 7px 18px;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.contact-inner a, .contact-inner  span {
+  font-size: 20px;
+  color: var(--primary-color);
+  padding: 8px 20px 0 0;
+  font-family: var(--primary-font);
+  padding-left: 15px;
+}
+
+.contact-inner-right {
+  background: #d9d9d9;
+  height: 800px;
+  margin: 80px 0 0 0;
+  padding: 80px 60px 80px 150px;
+}
+
+.contact-inner-right h3 {
+  font-family: var(--primary-font);
+  font-size: 22px;
+  color: #000000;
+  font-weight: var(--regular-font-weight);
+}
+
+.field {
+  padding: 1rem;
+  height: 50px;
+  width: 450px;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 20px 0;
+  outline: none;
+  border: none;
+  font-family: var(--secondary-font);
+  font-weight: 300;
+  font-size: 18px;
+  color: #000000c2;
+}
+
+.field-message {
+  padding: 1rem;
+  padding-bottom: 7rem;
+  width: 450px;
+  background: rgba(255, 255, 255, 0.6);
+  font-family: var(--secondary-font);
+  margin: 20px 0;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #000000c2;
+}
+
+.contact-inner-right a {
+  font-size: 20px;
+  background: #ffffff;
+  padding: 12px 50px;
+  margin-top: 20px;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: var(--regular-font-weight);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  cursor: pointer;
+}
+
+.contact-inner-right a:hover {
+  border-radius: 20px 0;
+}
+
+/* Back to Top Button */
+.backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 35px;
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  border: 1px solid transparent;
+}
+
+.backToTop:hover {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 1px solid #353535;
+}
+
+/* Contact Area End */
