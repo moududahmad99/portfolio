@@ -220,7 +220,7 @@
     font-size: 17px;
   }
 
-  .contact-inner-left .contact-inner a {
+  .contact-inner-left .contact-inner a, .contact-inner span {
     font-size: 17px;
   }
 
@@ -881,7 +881,7 @@
     margin: 0 30px;
   }
 
-  .contact-inner-left .contact-inner i {
+  .contact-inner-left .contact-inner i .contact-inner span {
     font-size: 17px;
   }
 
