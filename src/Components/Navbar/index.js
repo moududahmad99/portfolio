@@ -16,7 +16,7 @@ const Home = () => {
                     <div className="col-lg-8 col-md-8 col-sm-12 col-12">
                         <div className="home-description">
                             <h4>moudud ahmad</h4>
-                            <h3>frontend developer</h3>
+                            <h3>React Developer</h3>
                             <p>
                                 I'm a front-end developer with creative and analytical skills. I have a genuine
                                 interest and curiosity in the software industry. I enjoy working collaboratively but
@@ -30,7 +30,7 @@ const Home = () => {
                     <div className="col-lg-4 col-md-4 col-sm-4 col-8">
                         <div className={`home-navNprofile ${isMenuOpen ? 'toggle' : ''}`}>
                             <picture>
-                                <img src="images/temp-profile.jpg" alt="profile" />
+                                <img src="images/portfolio-img crop.jpg" alt="profile" />
                             </picture>
                             <ul>
                                 <li>

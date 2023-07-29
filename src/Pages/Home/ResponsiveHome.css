@@ -12,7 +12,6 @@
 
   .home-description h3 {
     font-size: 34px;
-    margin-left: 5.7px;
   }
 
   .home-description p {
@@ -117,7 +116,7 @@
 
   .home-description h3 {
     font-size: 34px;
-    margin-left: 3.9px;
+    /* margin-left: 3.9px; */
     line-height: 38px;
   }
 
@@ -220,7 +219,7 @@
     font-size: 17px;
   }
 
-  .contact-inner-left .contact-inner a, .contact-inner span {
+  .contact-inner-left .contact-inner a {
     font-size: 17px;
   }
 
@@ -263,7 +262,7 @@
 
   .home-description h3 {
     font-size: 25px;
-    margin-left: 7.4px;
+    /* margin-left: 7.4px; */
     line-height: 38px;
     transform: rotate(-9deg);
     -webkit-transform: rotate(-9deg);
@@ -305,6 +304,11 @@
     margin: 50px 0 0 58px;
     clip-path: circle(50% at 50% 50%);
     margin-bottom: 60px;
+  }
+
+  .project-nav ul {
+    /* padding: 0; */
+    padding-left: 1.2rem;
   }
 
   .home-navNprofile::after {
@@ -475,8 +479,7 @@
 
   .home-description h3 {
     font-size: 25px;
-    /* margin-left: 7.4px; */
-    margin-left: 0;
+    padding: 0;
     line-height: 38px;
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
@@ -547,6 +550,10 @@
     margin-left: 0px !important;
     margin: 0 20px !important;
     padding: 0 10px;
+  }
+
+  .project-nav ul {
+    padding-left: 1rem;
   }
   /* Home Area End */
 
@@ -631,6 +638,10 @@
     font-size: 17px;
   }
 
+  .my-location {
+    font-size: 17px !important;
+  }
+
   .contact-inner-right {
     padding: 80px 60px 80px 40px;
   }
@@ -642,6 +653,8 @@
   .contact-inner-right a {
     font-size: 21px;
   }
+
+  
   /* Contact Area End */
 }
 /* Small Area End */
@@ -710,8 +723,7 @@
 
   .home-description h3 {
     font-size: 24px;
-    /* margin-left: 7.4px; */
-    margin-left: 0;
+    padding: 0;
     line-height: 38px;
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
@@ -761,6 +773,7 @@
     clip-path: circle(50% at 50% 50%);
     margin-bottom: 60px;
     position: relative;
+    margin-top: 100px;
   }
 
   .home-navNprofile img::after {
@@ -835,13 +848,26 @@
   /* Project Area Start */
   .project-title h3 {
     font-size: 26px;
+    margin: 20px 0;
   }
 
   .project-nav {
-    display: none;
+    margin-bottom: 180px;
   }
 
+  .responsive-nav {
+    justify-content: center;
+    display: flex;
+  }
+
+  .project-nav ul {
+    display: block;
+    padding: 0;
+  }
+
+
   .project-nav ul li {
+    margin-bottom: 10px;
     padding: 20px 10.4px;
     font-size: 17px;
   }
@@ -881,12 +907,16 @@
     margin: 0 30px;
   }
 
-  .contact-inner-left .contact-inner i .contact-inner span {
+  .contact-inner-left .contact-inner i {
     font-size: 17px;
   }
 
   .contact-inner-left .contact-inner a {
     font-size: 17px;
+  }
+
+  .my-location {
+    font-size: 17px !important;
   }
 
   .contact-inner-right {
@@ -920,9 +950,7 @@
   .project-title h3 {
     font-size: 26px;
   }
-  .project-nav {
-    display: none;
-  }
+
   .project-nav ul li {
     padding: 20px 10.4px;
     font-size: 17px;
@@ -999,6 +1027,15 @@
 
 /* 320 Start (about area) */
 @media (max-width: 380px) {
+
+  /* Navbar Area Start */
+  .home-description h3 {
+    margin: 0;
+    padding: 0;
+  }
+  /* Navbar Area End */
+
+
   /* About Area Start */
   .about-title h3 {
     font-size: 22px;
@@ -1028,12 +1065,25 @@
   .project-title h3 {
     font-size: 22px;
   }
+
   .project-nav {
-    display: none;
+    margin-bottom: 120px;
   }
+
+  .responsive-nav {
+    justify-content: center;
+    display: flex;
+  }
+
+  .project-nav ul {
+    display: block;
+    padding: 0;
+  }
+
   .project-nav ul li {
-    padding: 20px 10.4px;
+    padding: 10px 10.4px;
     font-size: 17px;
+    margin-bottom: 10px;
   }
 
   .project-itemsInner h3 {
@@ -1076,6 +1126,10 @@
   .contact-inner-left .contact-inner a {
     font-size: 12px;
     padding: 7px 2px 0 10px;
+  }
+
+  .my-location {
+    font-size: 12px !important;
   }
 
   .contact-inner-right {

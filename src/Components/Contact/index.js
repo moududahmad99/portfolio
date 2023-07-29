@@ -47,7 +47,7 @@ const Contact = () => {
                                     </div>
                                     <div className="contact-inner d-flex my-4">
                                         <i><MdPlace /></i>
-                                        <span>Pallabi Mirpur 12, Dhaka 1216</span>
+                                        <span className='my-location'>Thakurgaon, Bangladesh</span>
                                     </div>
                                     <div className="contact-inner d-flex my-4">
                                         <i><FaLinkedin /></i>
