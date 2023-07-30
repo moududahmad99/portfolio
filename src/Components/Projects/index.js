@@ -169,6 +169,16 @@ const Project = () => {
 							</div>
 						</div>
 					</div>
+					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix react">
+						<div className="project-items">
+							<img src="images/project-gymnasium.png" alt="profile" />
+							<div className="project-itemsInner text-center">
+								<h3>Gymnasium</h3>
+								<a href="https://github.com/moududahmad99/gymnasium-react">view github</a>
+								<a href="https://moudud-gymnasium.netlify.app/">live server</a>
+							</div>
+						</div>
+					</div>
 					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix js">
 						<div className="project-items">
 							<img src="images/project-todoApp.png" alt="profile" />
