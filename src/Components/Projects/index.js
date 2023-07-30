@@ -33,7 +33,7 @@ const Project = () => {
 								<li data-filter=".react">React</li>
 								<li data-filter=".js">JavaScript</li>
 								<li data-filter=".sass">Sass</li>
-								<li data-filter=".responsive">Responsive</li>
+								<li data-filter=".responsive">HTML</li>
 							</ul>
 						</div>
 					</div>
@@ -159,13 +159,23 @@ const Project = () => {
 							</div>
 						</div>
 					</div>
+					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix react">
+						<div className="project-items">
+							<img src="images/project-mogo.png" alt="profile" />
+							<div className="project-itemsInner text-center">
+								<h3>Gymnasium</h3>
+								<a href="https://github.com/moududahmad99/mogo-react">view github</a>
+								<a href="https://moudud-mogo.netlify.app/">live server</a>
+							</div>
+						</div>
+					</div>
 					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix responsive">
 						<div className="project-items">
 							<img src="images/project-gymnasium.png" alt="profile" />
 							<div className="project-itemsInner text-center">
 								<h3>Gymnasium</h3>
-								<a href="https://github.com/moududahmad99/gynasium">view github</a>
-								<a href="https://moududahmad99.github.io/gynasium">live server</a>
+								<a href="https://github.com/moududahmad99/gymnasium">view github</a>
+								<a href="https://moududahmad99.github.io/gymnasium">live server</a>
 							</div>
 						</div>
 					</div>
@@ -186,6 +196,16 @@ const Project = () => {
 								<h3>Todo App</h3>
 								<a href="https://github.com/moududahmad99/basic-react-todo-app">view github</a>
 								<a href="https://moudud-todo-app.netlify.app/">live server</a>
+							</div>
+						</div>
+					</div>
+					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix react">
+						<div className="project-items">
+							<img src="images/project-nike.png" alt="profile" />
+							<div className="project-itemsInner text-center">
+								<h3>Gymnasium</h3>
+								<a href="https://github.com/moududahmad99/nike-app">view github</a>
+								<a href="https://moudud-nike.netlify.app/">live server</a>
 							</div>
 						</div>
 					</div>					
