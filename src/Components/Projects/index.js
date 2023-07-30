@@ -89,6 +89,26 @@ const Project = () => {
 							</div>
 						</div>
 					</div>
+					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix react">
+						<div className="project-items">
+							<img src="images/project-react.png" alt="profile" />
+							<div className="project-itemsInner text-center">
+								<h3>React Projects</h3>
+								<a href="https://github.com/moududahmad99/react-practice-projects">view github</a>
+								<a href="https://moudud-react-projects.netlify.app">live server</a>
+							</div>
+						</div>
+					</div>
+					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix react">
+						<div className="project-items">
+							<img src="images/projects-chatting-app.png" alt="profile" />
+							<div className="project-itemsInner text-center">
+								<h3>SIGNIN-SIGNUP</h3>
+								<a href="https://github.com/moududahmad99/chatting-app">view github</a>
+								<a href="https://moudud-chatting-app.netlify.app">live server</a>
+							</div>
+						</div>
+					</div>
 					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix responsive">
 						<div className="project-items">
 							<img src="images/project-axit.png" alt="profile" />
@@ -148,28 +168,7 @@ const Project = () => {
 								<a href="https://moudud-todo-app.netlify.app/">live server</a>
 							</div>
 						</div>
-					</div>
-					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix react">
-						<div className="project-items">
-							<img src="images/project-react.png" alt="profile" />
-							<div className="project-itemsInner text-center">
-								<h3>React Projects</h3>
-								<a href="https://github.com/moududahmad99/react-practice-projects">view github</a>
-								<a href="https://moudud-react-projects.netlify.app">live server</a>
-							</div>
-						</div>
-					</div>
-					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix react">
-						<div className="project-items">
-							<img src="images/projects-chatting-app.png" alt="profile" />
-							<div className="project-itemsInner text-center">
-								<h3>SIGNIN-SIGNUP</h3>
-								<a href="https://github.com/moududahmad99/chatting-app">view github</a>
-								<a href="https://moudud-chatting-app.netlify.app">live server</a>
-							</div>
-						</div>
-					</div>
-					
+					</div>					
 				</div>
 			</div>
 		</section>

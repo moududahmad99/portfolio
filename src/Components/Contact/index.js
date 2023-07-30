@@ -1,21 +1,73 @@
 import React from 'react';
-import { FaPhone} from 'react-icons/fa';
-import { HiOutlineMail } from 'react-icons/hi';
-import { MdPlace } from 'react-icons/md';
-import { FaLinkedin } from 'react-icons/fa';
-import { AiOutlineArrowUp  } from 'react-icons/ai';
+// eslint-disable-next-line
+import axios from 'axios';
 
-import './Style.css'
+import { FaPhone } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { MdPlace, MdSend } from 'react-icons/md';
+import { FaLinkedin } from 'react-icons/fa';
+import { AiOutlineArrowUp } from 'react-icons/ai';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import './Style.css';
 
 const Contact = () => {
-
     const handleBackToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: 'smooth',
         });
     };
 
+    const initialValues = {
+        fullName: '',
+        emailAddress: '',
+        phoneNumber: '',
+        message: '',
+    };
+
+    const validationSchema = Yup.object({
+        fullName: Yup.string().required('Required Full Name'),
+        emailAddress: Yup.string().email('Invalid email address').required('Required Email Address'),
+        phoneNumber: Yup.string().required('Required Phone Number'),
+        message: Yup.string().required('Required Message'),
+    });
+
+    const handleSubmit = (values, { setSubmitting, resetForm }) => {
+        setTimeout(() => {
+            console.log(values);
+            toast.error('Form submitted successfully!', {
+                position: 'top-right',
+                autoClose: 3000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: false,
+            });
+            resetForm();
+            setSubmitting(false);
+        }, 1000);
+    };
+
+
+    // const handleSubmit = (values, { setSubmitting }) => {
+    //     // Make a POST request to your server with the form data
+    //     axios
+    //         .post('/api/send-email', values) // Replace '/api/send-email' with your server endpoint
+    //         .then((response) => {
+    //             console.log('Email sent successfully!', response);
+    //         })
+    //         .catch((error) => {
+    //             console.error('Failed to send email:', error);
+    //         })
+    //         .finally(() => {
+    //             setSubmitting(false); // Don't forget to set isSubmitting to false after the request completes
+    //         });
+    // };
 
     return (
         <section id="contact">
@@ -59,21 +111,48 @@ const Contact = () => {
                     </div>
                     <div className="col-lg-7 col-md-12">
                         <div className="contact-inner-right">
-                            <h3>Full Name</h3>
-                            <input className="field" type="text" />
-                            <h3>Email Address</h3>
-                            <input className="field" type="text" />
-                            <h3>Phone Number</h3>
-                            <input className="field" type="text" />
-                            <h3>Message</h3>
-                            <input className="field-message" type="text" />
-                            <a href>Send</a>
+                            <Formik
+                                initialValues={initialValues}
+                                validationSchema={validationSchema}
+                                onSubmit={handleSubmit}
+                            >
+                                {({ isSubmitting }) => (
+                                    <Form>
+                                        <h3>Full Name</h3>
+                                        <div className='contact-right--inner'>
+                                            <Field className="field" type="text" name="fullName" />
+                                            <ErrorMessage name="fullName" component="div" className="error-message" />
+                                        </div>
+
+                                        <div className="contact-right--inner">
+                                            <h3>Email Address</h3>
+                                            <Field className="field" type="text" name="emailAddress" />
+                                            <ErrorMessage name="emailAddress" component="div" className="error-message" />
+                                        </div>
+                                        <div className="contact-right--inner">
+                                            <h3>Phone Number</h3>
+                                            <Field className="field" type="text" name="phoneNumber" />
+                                            <ErrorMessage name="phoneNumber" component="div" className="error-message" />
+                                        </div>
+                                        <div className="contact-right--inner">
+                                            <h3>Message</h3>
+                                            <Field className="field-message" type="text" name="message" />
+                                            <ErrorMessage name="message" component="div" className="error-message--textarea" />
+                                        </div>
+
+                                        <button type="submit" disabled={isSubmitting}>
+                                            Send
+                                            <i><MdSend /></i>
+                                        </button>
+                                    </Form>
+                                )}
+                            </Formik>
                         </div>
                     </div>
                 </div>
             </div>
             <a className="backToTop" href="##" onClick={handleBackToTop}>
-                <i><AiOutlineArrowUp  /></i>
+                <i><AiOutlineArrowUp /></i>
             </a>
         </section>
     );

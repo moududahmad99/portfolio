@@ -1,0 +1,33 @@
+body {
+  cursor: none;
+}
+
+.cursor-outline {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #353535;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  transition: 0.2s;
+}
+
+button,
+a,
+li,
+input,
+.box {
+  cursor: none !important;
+}
+
+.cursor {
+  width: 7px;
+  height: 7px;
+  background-color: #272626;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  transition: 0.01s;
+  border-radius: 50%;
+}

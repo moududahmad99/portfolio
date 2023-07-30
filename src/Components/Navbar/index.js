@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { FiDownload } from 'react-icons/fi';
 import './style.css';
 
 const Home = () => {
@@ -18,19 +19,20 @@ const Home = () => {
                             <h4>moudud ahmad</h4>
                             <h3>React Developer</h3>
                             <p>
-                                I'm a front-end developer with creative and analytical skills. I have a genuine
+                                I'm a Junior React Developer with creative and analytical skills. I have a genuine
                                 interest and curiosity in the software industry. I enjoy working collaboratively but
                                 can also run projects on my own.
                             </p>
                             <a href="assets/Resume of Sabbir Ahmad Moudud.pdf" download>
                                 download CV
+                                <i><FiDownload /></i>
                             </a>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-4 col-sm-4 col-8">
                         <div className={`home-navNprofile ${isMenuOpen ? 'toggle' : ''}`}>
                             <picture>
-                                <img src="images/portfolio-img crop.jpg" alt="profile" />
+                                <img src="images/portfolio-img crop 2.jpg" alt="profile" />
                             </picture>
                             <ul>
                                 <li>

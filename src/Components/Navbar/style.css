@@ -41,7 +41,7 @@
   font-weight: 700;
   font-size: 46px;
   background: -webkit-linear-gradient(#1d1d1d,#000000fd); 
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-stroke: 3px transparent;
   line-height: 40px;
   align-items: center;
@@ -89,12 +89,17 @@
   -o-transition: 0.4s;
   border: thin solid #d7d7d7;
   margin-left: 32px;
+  line-height: 30px;
 }
 
 .home-description a:hover {
   background: transparent;
   border: thin solid #d7d7d7;
   border-radius: 20px 0;
+}
+
+.home-description a i {
+  padding-left: 8px;
 }
 
 .home-navNprofile {

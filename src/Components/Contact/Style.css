@@ -47,7 +47,7 @@
   color: var(--primary-color);
 }
 
-.contact-inner a, .contact-inner  span {
+.contact-inner a, .contact-inner span {
   font-size: 20px;
   color: var(--primary-color);
   padding: 8px 20px 0 0;
@@ -69,18 +69,41 @@
   font-weight: var(--regular-font-weight);
 }
 
+.contact-right--inner {
+  position: relative;
+}
+
 .field {
   padding: 1rem;
   height: 50px;
   width: 450px;
   background: rgba(255, 255, 255, 0.6);
-  margin: 20px 0;
   outline: none;
   border: none;
   font-family: var(--secondary-font);
   font-weight: 300;
   font-size: 18px;
   color: #000000c2;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.error-message {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  font-size: 17px;
+  color: rgba(236, 26, 26, 0.801);
+  font-family: var(--primary-font);
+}
+
+.error-message--textarea {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  font-size: 17px;
+  color: rgba(236, 26, 26, 0.801);
+  font-family: var(--primary-font);
 }
 
 .field-message {
@@ -89,18 +112,18 @@
   width: 450px;
   background: rgba(255, 255, 255, 0.6);
   font-family: var(--secondary-font);
-  margin: 20px 0;
+  margin: 10px 0 5px 0;
   outline: none;
   border: none;
   font-size: 18px;
   color: #000000c2;
 }
 
-.contact-inner-right a {
+.contact-inner-right button {
   font-size: 20px;
   background: #ffffff;
-  padding: 12px 50px;
-  margin-top: 20px;
+  padding: 12px 40px;
+  margin-top: 40px;
   font-family: var(--primary-font);
   color: var(--primary-color);
   font-size: 20px;
@@ -111,11 +134,20 @@
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   cursor: pointer;
+  border: none;
 }
 
-.contact-inner-right a:hover {
+
+.contact-inner-right button:hover {
   border-radius: 20px 0;
 }
+
+.contact-inner-right button i {
+  padding-left: 8px;
+  color: #6b6b6b;
+}
+
+
 
 /* Back to Top Button */
 .backToTop {
