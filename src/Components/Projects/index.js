@@ -129,6 +129,16 @@ const Project = () => {
 							</div>
 						</div>
 					</div>
+					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix js">
+						<div className="project-items">
+							<img src="images/project-matrix.png" alt="profile" />
+							<div className="project-itemsInner text-center">
+								<h3>Matrix</h3>
+								<a href="https://github.com/moududahmad99/matrix">view github</a>
+								<a href="https://moududahmad99.github.io/matrix">live server</a>
+							</div>
+						</div>
+					</div>
 					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix react">
 						<div className="project-items">
 							<img src="images/project-hstu.png" alt="profile" />
