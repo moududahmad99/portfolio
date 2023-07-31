@@ -33,7 +33,7 @@ const Project = () => {
 								<li data-filter=".react">React</li>
 								<li data-filter=".js">JavaScript</li>
 								<li data-filter=".sass">Sass</li>
-								<li data-filter=".responsive">HTML</li>
+								<li data-filter=".responsive">HTML-Figma</li>
 							</ul>
 						</div>
 					</div>
@@ -59,6 +59,24 @@ const Project = () => {
 							</div>
 						</div>
 					</div>
+					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix responsive">
+						<div className="project-items">
+							<img src="images/project-portfolio.png" alt="profile" />
+							<div className="project-itemsInner text-center">
+								<h3>Portfolio</h3>
+								<a href="https://www.figma.com/file/33m3fFmXuAXoGkadszKM2X/Portfolio-SabbirAhmadMoudud?type=design&mode=design&t=YesVny18JJQFpZCQ-0">Live Project</a>
+							</div>
+						</div>
+					</div>
+					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix responsive">
+						<div className="project-items">
+							<img src="images/project-education.png" alt="profile" />
+							<div className="project-itemsInner text-center">
+								<h3>Education</h3>
+								<a href="https://www.figma.com/file/qJYNhZDM3dpV9992XKmaMM/Coaching-Center-Project-%5B-Cancelled-%5D?type=design&node-id=0-1&mode=design&t=9jr7S49RldZoGZ6w-0">Live Project</a>
+							</div>
+						</div>
+					</div>
 					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix js">
 						<div className="project-items">
 							<img src="images/project-js.png" alt="profile" />
@@ -79,6 +97,7 @@ const Project = () => {
 							</div>
 						</div>
 					</div>
+					
 					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix js">
 						<div className="project-items">
 							<img src="images/project-taskList.png" alt="profile" />
@@ -96,6 +115,15 @@ const Project = () => {
 								<h3>React Projects</h3>
 								<a href="https://github.com/moududahmad99/react-practice-projects">view github</a>
 								<a href="https://moudud-react-projects.netlify.app">live server</a>
+							</div>
+						</div>
+					</div>
+					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix responsive">
+						<div className="project-items">
+							<img src="images/project-showcase.png" alt="profile" />
+							<div className="project-itemsInner text-center">
+								<h3>Showcase</h3>
+								<a href="https://www.figma.com/file/zZyqKqZQCY3KQjM7U2vfC6/Projects-Showcase?type=design&node-id=0-1&mode=design&t=4rS2S6SN4zsyv6bu-0">Live Project</a>
 							</div>
 						</div>
 					</div>
