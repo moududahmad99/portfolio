@@ -121,7 +121,7 @@ const Project = () => {
 					</div>
 					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix react">
 						<div className="project-items">
-							<img src="images/project-hunt.png" alt="profile" />
+							<img src="images/project-hunt-react.png" alt="profile" />
 							<div className="project-itemsInner text-center">
 								<h3>Hunt React</h3>
 								<a href="https://github.com/moududahmad99/hunt-react">view github</a>
@@ -169,6 +169,26 @@ const Project = () => {
 							</div>
 						</div>
 					</div>
+					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix js">
+						<div className="project-items">
+							<img src="images/project-image-search.png" alt="profile" />
+							<div className="project-itemsInner text-center">
+								<h3>Image Search</h3>
+								<a href="https://github.com/moududahmad99/image-search-app">view github</a>
+								<a href="https://moududahmad99.github.io/image-search-app">live server</a>
+							</div>
+						</div>
+					</div>
+					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix js">
+						<div className="project-items">
+							<img src="images/project-recipe-search.png" alt="profile" />
+							<div className="project-itemsInner text-center">
+								<h3>Recipe Search</h3>
+								<a href="https://github.com/moududahmad99/recipe-search-app">view github</a>
+								<a href="https://moududahmad99.github.io/recipe-search-app">live server</a>
+							</div>
+						</div>
+					</div>
 					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix responsive">
 						<div className="project-items">
 							<img src="images/project-gymnasium.png" alt="profile" />
@@ -208,7 +228,7 @@ const Project = () => {
 								<a href="https://moudud-nike.netlify.app/">live server</a>
 							</div>
 						</div>
-					</div>					
+					</div>
 				</div>
 			</div>
 		</section>
