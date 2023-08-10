@@ -167,7 +167,7 @@ const Project = () => {
 							</div>
 						</div>
 					</div>
-					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix react">
+					{/* <div className="col-lg-3 col-md-6 col-sm-6 col-6 mix react">
 						<div className="project-items">
 							<img src="images/project-hstu.png" alt="profile" />
 							<div className="project-itemsInner text-center">
@@ -176,7 +176,7 @@ const Project = () => {
 								<a href="https://moudud-eeeclubofhstu.vercel.app/">live server</a>
 							</div>
 						</div>
-					</div>
+					</div> */}
 					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix js">
 						<div className="project-items">
 							<img src="images/project-bookList.png" alt="profile" />

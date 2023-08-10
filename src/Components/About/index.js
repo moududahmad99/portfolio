@@ -16,7 +16,7 @@ const About = () => {
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12 col-12">
                         <div className="about-inner-left">
-                            <p>I started coding in 2020. I'm a mid-level expert in React.JS, JavaScript, ES6, MongoDB, typescript, SASS, jQuery, ReactNative, Firebase, Photoshop, figma and many more. I enjoy it a lotwhen I do code. I've already built 20+ responsive websites. my hobby is photography and I spare time spend with watching movies.</p>
+                            <p>I started coding in 2020. I'm a mid-level expert in React.JS, Node.JS, Express.JS, JavaScript, ES6, typescript, SASS, jQuery, Firebase, Photoshop, figma and many more. I enjoy it a lotwhen I do code. I've already built 40+ responsive websites. my hobby is photography and I spare time spend with watching movies.</p>
                             <p> I'm highly interested in the software industry and looking for the right team so that I can push my career as a developer.</p>
                         </div>
                     </div>
