@@ -1,3 +1,21 @@
+@media (max-width: 991px) {
+  .disable-animation {
+    animation: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    -webkit-animation: none !important;
+  }
+}
+
 /* About Area Start */
 #about {
   margin: 80px 0;

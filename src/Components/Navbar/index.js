@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { FiDownload } from 'react-icons/fi';
 import './style.css';
+import { motion } from 'framer-motion'
 
 const Home = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -23,9 +24,13 @@ const Home = () => {
                                 interest and curiosity in the software industry. I enjoy working collaboratively but
                                 can also run projects on my own.
                             </p>
-                            <a href="assets/Resume of Sabbir Ahmad Moudud.pdf" download>
+                            <a
+                                href="assets/Resume of Sabbir Ahmad Moudud.pdf"
+                                download
+
+                            >
                                 download CV
-                                <i><FiDownload /></i>
+                                <i style={{ marginLeft: '5px' }}><FiDownload /></i>
                             </a>
                         </div>
                     </div>
@@ -36,7 +41,17 @@ const Home = () => {
                             </picture>
                             <ul>
                                 <li>
-                                    <a href="#home">Home</a>
+                                    <motion.a href="#home"
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9, rotate: 1 }}
+                                        drag
+                                        dragConstraints={{
+                                            top: -0.1,
+                                            left: -0.1,
+                                            right: 0.1,
+                                            bottom: 0.1,
+                                        }}
+                                    >Home</motion.a>
                                 </li>
                             </ul>
                             <ul>
@@ -46,9 +61,20 @@ const Home = () => {
                             </ul>
                             <ul>
                                 <li>
-                                    <a href="#project">Projects</a>
+                                    <motion.a
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9, rotate: 1 }}
+                                        drag
+                                        dragConstraints={{
+                                            top: -1,
+                                            left: -.1,
+                                            right: .1,
+                                            bottom: 1,
+                                        }}
+                                        href="#project">Project</motion.a>
                                 </li>
                             </ul>
+
                             <ul>
                                 <li>
                                     <a href="#contact">Contact</a>

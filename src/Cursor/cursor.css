@@ -7,10 +7,14 @@ body {
   height: 35px;
   border: 1px solid #353535;
   position: fixed;
-  border-radius: 50%;
   pointer-events: none;
   z-index: 1;
   transition: 0.2s;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 button,
@@ -28,6 +32,10 @@ input,
   position: fixed;
   pointer-events: none;
   z-index: 1;
-  transition: 0.01s;
   border-radius: 50%;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
 }

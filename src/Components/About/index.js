@@ -4,20 +4,9 @@ import './style.css'
 
 const About = () => {
 
-    const boxVariants = {
-        hidden: { opacity: 1, scale: 0 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                delayChildren: .3,
-                staggerChildren: 0.0
-            }
-        }
-    };
 
     const [isSectionVisible, setIsSectionVisible] = useState(false);
-
+    const isLargeScreen = window.innerWidth > 991;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,19 +18,46 @@ const About = () => {
             }
         };
 
-        // Attach the scroll event listener
-        window.addEventListener('scroll', handleScroll);
+        const handleResize = () => {
+            handleScroll();
+        };
 
-        // Initial check on component mount
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleResize);
+
         handleScroll();
 
-        // Clean up the event listener on component unmount
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
 
+    const animationVariants = {
+        hidden: { opacity: 0, x: 0, y: isLargeScreen ? 0 : 40, scale: 1, rotate: 0 },
+        visible: { opacity: isSectionVisible ? 1 : 0, x: 0, y: 0, scale: 1, rotate: 0 },
+    };
+
+    const slideInVariantLeft = {
+        hidden: { x: '-60px', opacity: 0 },
+        visible: { x: 0, opacity: 1 },
+    };
+
+    const slideInVariantRight = {
+        hidden: { x: '60px', opacity: 0 },
+        visible: { x: 0, opacity: 1 },
+    };
+
+    const slideInVariantTop = {
+        hidden: { y: '-60px', opacity: 0 },
+        visible: { y: 0, opacity: 1 },
+    };
+
+    const slideInVariantBottom = {
+        hidden: { y: '60px', opacity: 0 },
+        visible: { y: 0, opacity: 1 },
+    };
 
     return (
         <motion.section id="about" initial="hidden" animate={isSectionVisible ? "visible" : "hidden"}>
@@ -55,44 +71,76 @@ const About = () => {
                 </div>
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12 col-12">
-                        <motion.div initial={{ opacity: 0, x: 0, y: 60, scale: 1, rotate: 0 }}
-                            animate={{
-                                opacity: isSectionVisible ? 1 : 0,
-                                x: isSectionVisible ? 0 : 0,
-                                y: isSectionVisible ? 0 : -100,
-                                scale: 1,
-                                rotate: 0,
-                            }}
-                            transition={{ duration: 0.7 }}
-                            className="about-inner-left"
-                        >
-                            <p>I started coding in 2020. I'm a mid-level expert in React.JS, Node.JS, Express.JS, JavaScript, ES6, typescript, SASS, jQuery, Firebase, Photoshop, figma and many more. I enjoy it a lotwhen I do code. I've already built 40+ responsive websites. my hobby is photography and I spare time spend with watching movies.</p>
-                            <p> I'm highly interested in the software industry and looking for the right team so that I can push my career as a developer.</p>
-                        </motion.div>
+                        {isLargeScreen ? (
+                            <motion.div
+                                initial={animationVariants.hidden}
+                                animate={animationVariants.visible}
+                                transition={{ duration: 0.7 }}
+                                className={`about-inner-left ${isLargeScreen ? '' : 'disable-animation'}`}
+                            >
+                                <p>I started coding in 2020. I'm a mid-level expert in React.JS, Node.JS, Express.JS, JavaScript, ES6, typescript, SASS, jQuery, Firebase, Photoshop, figma and many more. I enjoy it a lotwhen I do code. I've already built 40+ responsive websites. my hobby is photography and I spare time spend with watching movies.</p>
+                                <p> I'm highly interested in the software industry and looking for the right team so that I can push my career as a developer.</p>
+                            </motion.div>
+                        ) : (
+                            <div className="about-inner-left">
+                                <p>I started coding in 2020. I'm a mid-level expert in React.JS, Node.JS, Express.JS, JavaScript, ES6, typescript, SASS, jQuery, Firebase, Photoshop, figma and many more. I enjoy it a lotwhen I do code. I've already built 40+ responsive websites. my hobby is photography and I spare time spend with watching movies.</p>
+                                <p> I'm highly interested in the software industry and looking for the right team so that I can push my career as a developer.</p>
+                            </div>
+                        )}
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12 col-12">
-                        <div className="about-inner-right">
+                        <div
+                            initial={animationVariants.hidden}
+                            animate={animationVariants.visible}
+                            transition={{ duration: 0.7 }}
+                            className={`about-inner-right ${isLargeScreen ? '' : 'disable-animation'}`}
+
+                        >
                             <div className="row">
                                 <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-center">
-                                    <motion.div className="box" initial="hidden" animate={isSectionVisible ? "visible" : "hidden"} variants={boxVariants}>
+                                    <motion.div
+                                        className={`box ${isLargeScreen ? '' : 'disable-animation'}`}
+                                        initial="hidden"
+                                        animate={isSectionVisible ? 'visible' : 'hidden'}
+                                        transition={{ duration: 0.4 }}
+                                        variants={slideInVariantLeft}
+                                    >
                                         <h4 className="counter">14</h4>
                                         <h3>React Project</h3>
                                     </motion.div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-center">
-                                    <motion.div className="box" variants={boxVariants}>
+                                    <motion.div
+                                        className={`box ${isLargeScreen ? '' : 'disable-animation'}`}
+                                        initial="hidden"
+                                        animate={isSectionVisible ? 'visible' : 'hidden'}
+                                        transition={{ duration: 0.4 }}
+                                        variants={slideInVariantTop}
+                                    >
                                         <h4 className="counter">40</h4>
                                         <h3>Responsive</h3>
                                     </motion.div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-center">
-                                    <motion.div className="box" variants={boxVariants}>
+                                    <motion.div
+                                        className={`box ${isLargeScreen ? '' : 'disable-animation'}`}
+                                        initial="hidden"
+                                        animate={isSectionVisible ? 'visible' : 'hidden'}
+                                        transition={{ duration: 0.4 }}
+                                        variants={slideInVariantBottom}
+                                    >
                                         <h4 className="counter">12</h4>
                                         <h3>JS Project</h3>
                                     </motion.div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-center">
-                                    <motion.div className="box" variants={boxVariants}>
+                                    <motion.div
+                                        className={`box ${isLargeScreen ? '' : 'disable-animation'}`}
+                                        initial="hidden"
+                                        animate={isSectionVisible ? 'visible' : 'hidden'}
+                                        transition={{ duration: 0.4 }}
+                                        variants={slideInVariantRight}
+                                    >
                                         <h4 className="counter">1</h4>
                                         <h3>SASS</h3>
                                     </motion.div>

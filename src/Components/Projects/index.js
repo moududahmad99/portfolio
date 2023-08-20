@@ -3,28 +3,26 @@ import './style.css'
 // eslint-disable-next-line
 import mixitup from 'mixitup';
 
-import { motion } from 'framer-motion';
+
 
 
 const Project = () => {
 	const containerRef = useRef(null);
 
 	useEffect(() => {
-		const mixer = mixitup(containerRef.current);
-
-		mixer.filter('.react');
-
-		return () => {
-			mixer.destroy();
-		};
+	  const mixer = mixitup(containerRef.current);
+  
+	  mixer.filter('.react');
+  
+	  return () => {
+		mixer.destroy();
+	  };
 	}, []);
+	
+  
 
 	return (
-		<motion.section id="project"
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}
-			transition={{ duration: 2.5 }}>
+		<section id="project">
 			<div className="container">
 				<div className="row justify-content-center">
 					<div className="col-lg-4 col-md-6 col-sm-8 col-12 text-center">
@@ -198,7 +196,7 @@ const Project = () => {
 						<div className="project-items">
 							<img src="images/project-mogo.png" alt="profile" />
 							<div className="project-itemsInner text-center">
-								<h3>Gymnasium</h3>
+								<h3>Mogo</h3>
 								<a href="https://github.com/moududahmad99/mogo-react">view github</a>
 								<a href="https://moudud-mogo.netlify.app/">live server</a>
 							</div>
@@ -258,7 +256,7 @@ const Project = () => {
 						<div className="project-items">
 							<img src="images/project-nike.png" alt="profile" />
 							<div className="project-itemsInner text-center">
-								<h3>Gymnasium</h3>
+								<h3>Nike App</h3>
 								<a href="https://github.com/moududahmad99/nike-app">view github</a>
 								<a href="https://moudud-nike.netlify.app/">live server</a>
 							</div>
@@ -266,7 +264,7 @@ const Project = () => {
 					</div>
 				</div>
 			</div>
-		</motion.section>
+		</section>
 	);
 };
 
