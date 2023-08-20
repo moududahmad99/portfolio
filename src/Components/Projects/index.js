@@ -3,6 +3,9 @@ import './style.css'
 // eslint-disable-next-line
 import mixitup from 'mixitup';
 
+import { motion } from 'framer-motion';
+
+
 const Project = () => {
 	const containerRef = useRef(null);
 
@@ -17,7 +20,11 @@ const Project = () => {
 	}, []);
 
 	return (
-		<section id="project">
+		<motion.section id="project"
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 2.5 }}>
 			<div className="container">
 				<div className="row justify-content-center">
 					<div className="col-lg-4 col-md-6 col-sm-8 col-12 text-center">
@@ -97,7 +104,7 @@ const Project = () => {
 							</div>
 						</div>
 					</div>
-					
+
 					<div className="col-lg-3 col-md-6 col-sm-6 col-6 mix js">
 						<div className="project-items">
 							<img src="images/project-taskList.png" alt="profile" />
@@ -259,7 +266,7 @@ const Project = () => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 
