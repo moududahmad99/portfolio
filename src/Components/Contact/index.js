@@ -183,89 +183,101 @@ const Contact = () => {
                     <div className="col-lg-7 col-md-12">
                         {isLargeDevice ? (
                             <div className="contact-inner-right" >
-                            <Formik
-                                initialValues={initialValues}
-                                validationSchema={validationSchema}
-                                onSubmit={handleSubmit}
-                            >
-                                {({ isSubmitting }) => (
-                                    <Form>
-                                        <h3>Full Name</h3>
-                                        <div className='contact-right--inner'>
-                                            <Field className="field" type="text" name="fullName" />
-                                            <ErrorMessage name="fullName" component="div" className="error-message" />
-                                        </div>
+                                <Formik
+                                    initialValues={initialValues}
+                                    validationSchema={validationSchema}
+                                    onSubmit={handleSubmit}
+                                >
+                                    {({ isSubmitting }) => (
+                                        <Form>
+                                            <h3>Full Name</h3>
+                                            <div className='contact-right--inner'>
+                                                <Field className="field" type="text" name="fullName" />
+                                                <ErrorMessage name="fullName" component="div" className="error-message" />
+                                            </div>
 
-                                        <div className="contact-right--inner">
-                                            <h3>Email Address</h3>
-                                            <Field className="field" type="text" name="emailAddress" />
-                                            <ErrorMessage name="emailAddress" component="div" className="error-message" />
-                                        </div>
-                                        <div className="contact-right--inner">
-                                            <h3>Phone Number</h3>
-                                            <Field className="field" type="text" name="phoneNumber" />
-                                            <ErrorMessage name="phoneNumber" component="div" className="error-message" />
-                                        </div>
-                                        <div className="contact-right--inner">
-                                            <h3>Message</h3>
-                                            <Field className="field-message" type="text" name="message" />
-                                            <ErrorMessage name="message" component="div" className="error-message--textarea" />
-                                        </div>
+                                            <div className="contact-right--inner">
+                                                <h3>Email Address</h3>
+                                                <Field className="field" type="text" name="emailAddress" />
+                                                <ErrorMessage name="emailAddress" component="div" className="error-message" />
+                                            </div>
+                                            <div className="contact-right--inner">
+                                                <h3>Phone Number</h3>
+                                                <Field className="field" type="text" name="phoneNumber" />
+                                                <ErrorMessage name="phoneNumber" component="div" className="error-message" />
+                                            </div>
+                                            <div className="contact-right--inner">
+                                                <h3>Message</h3>
+                                                <Field className="field-message" type="text" name="message" />
+                                                <ErrorMessage name="message" component="div" className="error-message--textarea" />
+                                            </div>
 
-                                        <button type="submit" disabled={isSubmitting}>
-                                            Send
-                                            <i><MdSend /></i>
-                                        </button>
-                                    </Form>
-                                )}
-                            </Formik>
-                        </div>
+                                            <button type="submit" disabled={isSubmitting}>
+                                                Send
+                                                <i><MdSend /></i>
+                                            </button>
+                                        </Form>
+                                    )}
+                                </Formik>
+                            </div>
                         ) : (
                             <motion.div className="contact-inner-right" initial="hidden" animate={isSectionVisible ? "hidden" : "visible"} transition={{ duration: 1 }} variants={slideInVariantRight}>
-                            <Formik
-                                initialValues={initialValues}
-                                validationSchema={validationSchema}
-                                onSubmit={handleSubmit}
-                            >
-                                {({ isSubmitting }) => (
-                                    <Form>
-                                        <h3>Full Name</h3>
-                                        <div className='contact-right--inner'>
-                                            <Field className="field" type="text" name="fullName" />
-                                            <ErrorMessage name="fullName" component="div" className="error-message" />
-                                        </div>
+                                <Formik
+                                    initialValues={initialValues}
+                                    validationSchema={validationSchema}
+                                    onSubmit={handleSubmit}
+                                >
+                                    {({ isSubmitting }) => (
+                                        <Form>
+                                            <h3>Full Name</h3>
+                                            <div className='contact-right--inner'>
+                                                <Field className="field" type="text" name="fullName" />
+                                                <ErrorMessage name="fullName" component="div" className="error-message" />
+                                            </div>
 
-                                        <div className="contact-right--inner">
-                                            <h3>Email Address</h3>
-                                            <Field className="field" type="text" name="emailAddress" />
-                                            <ErrorMessage name="emailAddress" component="div" className="error-message" />
-                                        </div>
-                                        <div className="contact-right--inner">
-                                            <h3>Phone Number</h3>
-                                            <Field className="field" type="text" name="phoneNumber" />
-                                            <ErrorMessage name="phoneNumber" component="div" className="error-message" />
-                                        </div>
-                                        <div className="contact-right--inner">
-                                            <h3>Message</h3>
-                                            <Field className="field-message" type="text" name="message" />
-                                            <ErrorMessage name="message" component="div" className="error-message--textarea" />
-                                        </div>
+                                            <div className="contact-right--inner">
+                                                <h3>Email Address</h3>
+                                                <Field className="field" type="text" name="emailAddress" />
+                                                <ErrorMessage name="emailAddress" component="div" className="error-message" />
+                                            </div>
+                                            <div className="contact-right--inner">
+                                                <h3>Phone Number</h3>
+                                                <Field className="field" type="text" name="phoneNumber" />
+                                                <ErrorMessage name="phoneNumber" component="div" className="error-message" />
+                                            </div>
+                                            <div className="contact-right--inner">
+                                                <h3>Message</h3>
+                                                <Field className="field-message" type="text" name="message" />
+                                                <ErrorMessage name="message" component="div" className="error-message--textarea" />
+                                            </div>
 
-                                        <button type="submit" disabled={isSubmitting}>
-                                            Send
-                                            <i><MdSend /></i>
-                                        </button>
-                                    </Form>
-                                )}
-                            </Formik>
-                        </motion.div>
+                                            <button type="submit" disabled={isSubmitting}>
+                                                Send
+                                                <i><MdSend /></i>
+                                            </button>
+                                        </Form>
+                                    )}
+                                </Formik>
+                            </motion.div>
                         )}
                     </div>
                 </div>
             </div>
-            <a className="backToTop" href="##" onClick={handleBackToTop}>
-                <i><AiOutlineArrowUp /></i>
-            </a>
+            <motion.a
+                className="backToTop"
+                href="##"
+                onClick={handleBackToTop}
+                whileHover={{ scale: 1.4, rotate: 360 }}
+                whileTap={{
+                    scale: 0.4,
+                    rotate: 0,
+                    borderRadius: "100%"
+                }}
+            >
+                <i>
+                    <AiOutlineArrowUp />
+                </i>
+            </motion.a>
         </section>
     );
 };

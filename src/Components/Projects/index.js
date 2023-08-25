@@ -3,6 +3,8 @@ import './style.css'
 // eslint-disable-next-line
 import mixitup from 'mixitup';
 
+import { motion } from 'framer-motion'
+
 
 
 
@@ -10,16 +12,16 @@ const Project = () => {
 	const containerRef = useRef(null);
 
 	useEffect(() => {
-	  const mixer = mixitup(containerRef.current);
-  
-	  mixer.filter('.react');
-  
-	  return () => {
-		mixer.destroy();
-	  };
+		const mixer = mixitup(containerRef.current);
+
+		mixer.filter('.react');
+
+		return () => {
+			mixer.destroy();
+		};
 	}, []);
-	
-  
+
+
 
 	return (
 		<section id="project">
@@ -35,10 +37,46 @@ const Project = () => {
 					<div className="col-lg-7 col-md-12 col-sm-12 col-12 text-center responsive-nav">
 						<div className="project-nav">
 							<ul>
-								<li data-filter=".react">React</li>
-								<li data-filter=".js">JavaScript</li>
-								<li data-filter=".sass">Sass</li>
-								<li data-filter=".responsive">HTML-Figma</li>
+								<motion.li
+									whileHover={{
+										scale: 1.02,
+										transition: { duration: 0.1 },
+									}}
+									whileTap={{ scale: 0.9 }}
+									data-filter=".react"
+								>
+									React
+								</motion.li>
+								<motion.li
+									whileHover={{
+										scale: 1.02,
+										transition: { duration: 0.1 },
+									}}
+									whileTap={{ scale: 0.9 }}
+									data-filter=".js"
+								>
+									JavaScript
+								</motion.li>
+								<motion.li
+									whileHover={{
+										scale: 1.02,
+										transition: { duration: 0.1 },
+									}}
+									whileTap={{ scale: 0.9 }}
+									data-filter=".sass"
+								>
+									Sass
+								</motion.li>
+								<motion.li
+									whileHover={{
+										scale: 1.02,
+										transition: { duration: 0.1 },
+									}}
+									whileTap={{ scale: 0.9 }}
+									data-filter=".responsive"
+								>
+									HTML-Figma
+								</motion.li>
 							</ul>
 						</div>
 					</div>
